@@ -1,74 +1,16 @@
-# Data analysis
-- Document here the project: mlutils
-- Description: Project Description
-- Data Source:
-- Type of analysis:
+# MLUTILS
 
-Please document the project the better you can.
+## preproc
+- check_duplicates: renvoi si des duplicates sont dans le dataframe
+- check_na: renvoi la proportion de NA par colonnes
+### simple_imputer_by_columns
+Renvoi un DataFrame où les valeurs manquantes sont imputés selon les
+paramètres passés en argument.
 
-# Startup the project
+#### Parameters
+- train_df: DataFrame
+- columns_def: dictionnaire où chaque clef est un nom de colonne du DataFrame et où
+les clefs / valeurs sont les paramètres pour l'imputer
 
-The initial setup.
-
-Create virtualenv and install the project:
-```bash
-sudo apt-get install virtualenv python-pip python-dev
-deactivate; virtualenv ~/venv ; source ~/venv/bin/activate ;\
-    pip install pip -U; pip install -r requirements.txt
-```
-
-Unittest test:
-```bash
-make clean install test
-```
-
-Check for mlutils in gitlab.com/{group}.
-If your project is not set please add it:
-
-- Create a new project on `gitlab.com/{group}/mlutils`
-- Then populate it:
-
-```bash
-##   e.g. if group is "{group}" and project_name is "mlutils"
-git remote add origin git@github.com:{group}/mlutils.git
-git push -u origin master
-git push -u origin --tags
-```
-
-Functionnal test with a script:
-
-```bash
-cd
-mkdir tmp
-cd tmp
-mlutils-run
-```
-
-# Install
-
-Go to `https://github.com/{group}/mlutils` to see the project, manage issues,
-setup you ssh public key, ...
-
-Create a python3 virtualenv and activate it:
-
-```bash
-sudo apt-get install virtualenv python-pip python-dev
-deactivate; virtualenv -ppython3 ~/venv ; source ~/venv/bin/activate
-```
-
-Clone the project and install it:
-
-```bash
-git clone git@github.com:{group}/mlutils.git
-cd mlutils
-pip install -r requirements.txt
-make clean install test                # install and test
-```
-Functionnal test with a script:
-
-```bash
-cd
-mkdir tmp
-cd tmp
-mlutils-run
-```
+#### Return
+Renvoi un DataFrame où les *na* des colonnes passées en argument sont remplis

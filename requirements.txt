@@ -8,24 +8,3 @@ wheel>=0.29
 numpy
 pandas
 scikit-learn
-
-# tests/linter
-black
-coverage
-flake8
-pytest
-yapf
-
-# API
-gcsfs
-google-cloud-storage
-mlflow
-s3fs
-
-# utilities
-six>=1.14
-joblib
-memoized-property
-termcolor
-
-git+https://github.com/DiMartinoMathieu/mlutils.git@main
