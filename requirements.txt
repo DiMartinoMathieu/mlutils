@@ -28,4 +28,4 @@ joblib
 memoized-property
 termcolor
 
-git@github.com:DiMartinoMathieu/mlutils.git@main
+git+https://git@github.com:DiMartinoMathieu/mlutils.git@main
